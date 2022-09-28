@@ -107,5 +107,5 @@ $cliente2->darDeBaja(Date("30/09/2022"));
 
 print_r($cliente1);
 print_r($cliente2);
-//MINUTO 1.37.20 !!!!!!!!!
+
 ?>
