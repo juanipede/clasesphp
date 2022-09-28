@@ -17,7 +17,7 @@ if(file_exists("archivo.txt")){
     $aClientes = array();
 }
 
-$pos = isset($_GET["pos"]) && $_GET["pos"] >= 0 ? $_GET["pos"] : "";
+$pos = isset($_GET["pos"]) && $_GET["pos"] >= 0 ? $_GET["pos"] : ""; //esta seteado $_GET["pos"] y $_GET["pos"] es mayor o igual a 0? entonces "$pos" = $_GET["pos"], sino "$pos" es vacio. 
 //SI ES POST...
 if($_POST){  
     //Creamos las variables post..
@@ -77,7 +77,7 @@ file_put_contents("archivo.txt", $jsonClientes);
 
 //Para Eliminar..
 
-if(isset($_GET["pos"]) && $_GET["do"] == "eliminar"){
+if(isset($_GET["do"]) && $_GET["do"] == "eliminar"){
     //Eliminar del array aClientes la posición a borrar unset()
     unset($aClientes[$pos]);
 
